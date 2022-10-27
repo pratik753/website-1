@@ -1,91 +1,70 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="en">
 
-  {{ partial "head.html" . }}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Section</title>
+  <link rel="stylesheet" type="text/css" href="/CSS/ordercss.css">
+</head>
 
-  <body>
-
-    <div id="all">
-
-        <header>
-
-          {{ partial "nav.html" . }}
-
-        </header>
-
-        {{ partial "breadcrumbs.html" . }}
-
-        <div id="content">
-            {{ if isset .Params "id" }}
-
-              {{ partial .Params.id . }}
-
-            {{ else }}
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-md-12">
-
-                        <div>
-                          {{ .Content }}
-                        </div>
-
-                    </div>
-
-                </div>
-                <!-- /.row -->
-
-            </div>
-            <!-- /.container -->
-
-            {{ end }}
+<body>
+  <section id="order">
+    <br>
+    <h1 class="head">Order</h1>
+    <div id="contact-box">
+      <form action="">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" name="myname" id="name" placeholder="Enter Your Name ">
         </div>
-         <div class="row">
-
-                    <div class="col-md-12">
-
-                        <div>
-                          {{ .Content }}
-                        </div>
-
-                    </div>
-
-                </div>
-                <!-- /.row -->
-
-            </div>
-            <!-- /.container -->
-
-            {{ end }}
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" name="myname" id="email" placeholder="Enter Your Email ">
         </div>
-     <div class="row">
-
-                    <div class="col-md-12">
-
-                        <div>
-                          {{ .Content }}
-                        </div>
-
-                    </div>
-
-                </div>
-                <!-- /.row -->
-
-            </div>
-            <!-- /.container -->
-
-            {{ end }}
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="phone" name="myname" id="phone" placeholder="Enter Your Phone Number ">
         </div>
-        <!-- /#content -->
 
-        {{ partial "footer.html" . }}
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input type="phone" name="myname" id="address" placeholder="Enter Your Address">
 
+          <div class="form-group">
+            <label for="city">Select Your City</label>
+            <select name="city" id="city">
+              <option value="muz" selected>Muzaffarpur</option>
+              <option value="notavailable">Not Available</option>
+
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="state">Select Your state</label>
+            <select name="state" id="state">
+              <option value="bihar" selected>Bihar</option>
+              <option value="notavailable">Not Available</option>
+
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="state">Select Your Items</label>
+            <select name="state" id="state">
+              <option value="bihar" selected>Visting Card</option>
+              <option value="weddingcard">Wedding Card</option>
+              <option value="postor">Postor</option>
+              <option value="book">Book</option>
+          </div>
+          <div>
+            <input type="submit" id="submit" value="Order">
+          </div>
+      </form>
     </div>
-    <!-- /#all -->
+    </div>
+    </div>
+    </div>
+  </section>
 
-    {{ partial "scripts.html" . }}
+</body>
 
-  </body>
 </html>
